@@ -30,7 +30,8 @@
 		<form>
 			<div class="form-group">
 		    	<label for="inputName">Name</label>
-		    	<input type="text" class="form-control" id="inputName" required placeholder="Enter name">
+		    	<input id="nameId" name="name" type="text" class="form-control" id="inputName" required placeholder="Enter name" onkeypress="return (event.charCode > 64 && 
+					event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)">
 		    </div>
 
 		    <div class="form-group">
@@ -50,8 +51,8 @@
 		    	<label for="inputField" id="searchInput">Search By Input</label>
 		    	<input required type="text" class="form-control" disabled="true" id="inputValue" name="addedElement" placeholder="Please select Search By to active this">
 		    </div>
-		    
-		    <button class="btn btn-primary" type="submit">Submit form</button>
+
+		    <button class="btn btn-primary" onclick='phonenumber()' type="submit">Submit form</button>
 		</form>
 	</div>
 		
@@ -62,6 +63,6 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
 	<!-- Custom JS -->
-	<script type="text/javascript" src="script.js"></script>	
+	<script src="script.js"></script>	
 </body>
 </html>

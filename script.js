@@ -14,29 +14,13 @@ function addPhone() {
 		$('#inputValue').attr('placeholder', 'Enter Phone no. here');
 }
 
-function phonenumber(inputtxt) {
+function phonenumber() {
 
-  var phoneno = /^\d{10}$/;
-  if((inputtxt.value.match(phoneno)) {
-      		return true;
-  }
-  else {
-        alert("message");
-        return false;
-    }
-}
-
-
-// function checkValid(inputtxt)
-// {
-//   var phoneno = /^\d{10}$/;
-//   if((inputtxt.value.match(phoneno))
-//   {
-//   		return true;
-//   }
-//   else
-//     {
-//         alert("message");
-//         return false;
-//     }
-// }
+	if($('input[name=searchBy]:checked').val() == "phoneno") {
+		var name = $('#inputValue').val();
+		if (name.length < 10 || name.length > 10)
+		{
+		    alert('Mobile number should be of 10 digits '); 
+		}
+	}
+} 
