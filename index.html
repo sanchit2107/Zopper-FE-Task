@@ -27,7 +27,7 @@
 
 	<div class="container">
 		<!-- FORM -->
-		<form>
+		<form id="myForm">
 			<div class="form-group">
 		    	<label for="inputName">Name</label>
 		    	<input id="nameId" name="name" type="text" class="form-control" id="inputName" required placeholder="Enter name" onkeypress="return (event.charCode > 64 && 
@@ -63,6 +63,36 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
 	<!-- Custom JS -->
-	<script src="script.js"></script>	
+	<script src="script.js"></script>
+
+	<script type="text/javascript">
+		// dummy REST API
+
+		const myForm = document.getElementById('myForm');
+
+		myForm.addEventListener('submit', function(e) {
+
+			e.preventDefault();
+
+
+			const formData = new FormData(this);
+			const searchParams = new URLSearchParams();
+
+			for(const pairs in formData) {
+				searchParams.append(pairs[0], pairs[1]);
+			}
+
+			fetch('dummy.php', {
+				method: 'post',
+				body: searchParams
+			}).then(function (response) {
+				return response.text();
+			}).then(function (text) {
+				console.log(text);
+			}).catch(function (error) {
+				console.error(error);
+			})
+		});
+	</script>
 </body>
 </html>

@@ -11,6 +11,7 @@ function addPhone() {
 		$('#inputValue').attr('placeholder', 'Enter Phone no. here');
 }
 
+// Check length of Mobile Number
 function phonenumber() {
 
 	if($('input[name=searchBy]:checked').val() == "phoneno") {
@@ -22,5 +23,4 @@ function phonenumber() {
 	}
 } 
 
-//
 
