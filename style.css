@@ -1,0 +1,16 @@
+.heading {
+	font-size: 64px;
+	text-align: center!important;
+	display: inline-block;
+	float: left;
+	/*margin-left: 250px;*/
+	padding-top: 20px;
+	font-weight: 700;
+	margin-left: 25px;
+}
+
+.logo {
+	float: left;
+	display: inline-block;
+	text-align: center;
+}
