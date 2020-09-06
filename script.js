@@ -1,6 +1,3 @@
-$(document).ready(function() {	
-});
-
 function addEmail() {
 		$('#inputValue').attr('disabled',false);
 		$('#inputValue').attr('type', 'email');
@@ -24,3 +21,6 @@ function phonenumber() {
 		}
 	}
 } 
+
+//
+
